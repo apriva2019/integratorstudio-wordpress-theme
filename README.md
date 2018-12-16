@@ -1,1 +1,1 @@
-# Kneaders WP Theme (api)
+# APRIVA API WP Theme (api)
