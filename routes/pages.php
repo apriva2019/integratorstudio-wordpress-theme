@@ -35,6 +35,7 @@
       'home_content-img' => get_field('home_content_img', $post_id),
       'meta'             => get_yoast_pages( $post_id ),
       'children'         => childrenContent( $children ),
+      'api_content'      => get_field('api_content', $post_id)
     ];
     return $page;
   }
