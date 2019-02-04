@@ -30,7 +30,7 @@
       'title'            => $raw_post->post_title,
       'content'          => apply_filters('the_content', $raw_post->post_content),
       'slug'             => $raw_post->post_name,
-      'featured_img'     => get_the_post_thumbnail_url($post_id, 'full'),
+      'featured_img'     => get_field('featured_img', $post_id),
       'hero'             => get_field('hero', $post_id),
       'home_content-img' => get_field('home_content_img', $post_id),
       'meta'             => get_yoast_pages( $post_id ),
