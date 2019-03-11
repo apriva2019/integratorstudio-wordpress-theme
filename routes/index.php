@@ -6,6 +6,6 @@
   /* require_once 'items_by_cat.php'; */
 
   add_action('rest_api_init', 'registerPageRoutes');
+  add_action('rest_api_init', 'registerPostRoutes');
   /* add_action('rest_api_init', 'registerCategoryRoutes'); */
   /* add_action('rest_api_init', 'registerItemsRoutes'); */
-  add_action('rest_api_init', 'registerPostRoutes');
