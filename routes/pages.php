@@ -32,7 +32,7 @@
       'slug'             => $raw_post->post_name,
       'featured_img'     => get_field('featured_img', $post_id),
       'hero'             => get_field('hero', $post_id),
-      'home_content-img' => get_field('home_content_img', $post_id),
+      'home_content_img' => get_field('home_content_img', $post_id),
       'meta'             => get_yoast_pages( $post_id ),
       'children'         => childrenContent( $children ),
       'api_content'      => get_field('api_content', $post_id)
