@@ -2,10 +2,8 @@
 
   require_once 'pages.php';
   require_once 'posts.php';
-  /* require_once 'category.php'; */
-  /* require_once 'items_by_cat.php'; */
+  require_once 'user.php';
 
   add_action('rest_api_init', 'registerPageRoutes');
   add_action('rest_api_init', 'registerPostRoutes');
-  /* add_action('rest_api_init', 'registerCategoryRoutes'); */
-  /* add_action('rest_api_init', 'registerItemsRoutes'); */
+  add_action('wp_rest_user_create_user', 'user_created', 10, 2);
