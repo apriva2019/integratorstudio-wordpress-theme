@@ -25,6 +25,14 @@ add_theme_support('post-thumbnails', array(
     'page',
 ));
 
+
+// redirection for after resetting password
+function wpse_lost_password_redirect() {
+  wp_redirect( 'https://integratorstudio.netlify.com/login' );
+  exit;
+}
+add_action('after_password_reset', 'wpse_lost_password_redirect');
+
 /* YOAST SEO SUPPORT */
 function get_yoast_pages($post_id){
 
@@ -52,7 +60,7 @@ function get_yoast_pages($post_id){
 
 function remove_wp_seo_meta_box() {
 	remove_meta_box('wpseo_meta', 'location', 'normal');
-}  
+}
 add_action('add_meta_boxes', 'remove_wp_seo_meta_box', 100);
 
 add_action( 'admin_init', 'remove_yoast_seo_posts_filter', 20 );
